@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Dashboard",
+    "slug": ""
+  },
+  {
+    "title": "Clients",
+    "slug": "/clients"
+  },
+  {
+    "title": "Revenue Collectors",
+    "slug": "/revenue-collectors"
+  },
+  {
+    "title": "Invoices",
+    "slug": "/invoices"
+  },
+  {
+    "title": "Payments",
+    "slug": "/payments"
+  }
+]
