@@ -29,7 +29,10 @@ export default function RevenueCollectorForm(props: IRevenueCollectorForm) {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      handleSubmit?.(values);
+      handleSubmit?.({
+        ...values,
+        payments: revenueCollector ? revenueCollector.payments : [],
+      });
     },
   });
 
