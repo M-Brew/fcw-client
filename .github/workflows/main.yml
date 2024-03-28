@@ -16,3 +16,12 @@ jobs:
         run: docker build -t brew3/fcw-client --build-arg="NEXT_PUBLIC_AXIOS_BASE_URL=${{ secrets.SERVER_IP }}" .
       - name: Publish image to docker hub
         run: docker push brew3/fcw-client:latest
+  deploy:
+    name: deploy
+    needs: build
+    runs-on: [self-hosted]
+    steps:
+      - name: Pull latest image from docker hub
+        run: docker-compose pull brew3/fcw-client:latest
+      - name: Re-run docker compose
+        run: docker-compose up -d
