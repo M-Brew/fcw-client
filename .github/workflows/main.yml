@@ -28,4 +28,4 @@ jobs:
         run: docker-compose up -d
         working-directory: /app
       - name: Remove old image
-        run: docker image prune
+        run: docker image prune -f
