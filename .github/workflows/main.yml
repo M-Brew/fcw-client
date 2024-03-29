@@ -27,3 +27,5 @@ jobs:
       - name: Re-run docker compose
         run: docker-compose up -d
         working-directory: /app
+      - name: Remove old image
+        run: docker image prune
